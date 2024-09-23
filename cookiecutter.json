@@ -1,0 +1,11 @@
+{
+    "project_name": "project_name",
+    "author_email": "ihuman.research.lab@gmail.com",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "__package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "author_name": "Your name (or your organization/company/team)",
+    "short_description": "A basic python library",
+    "long_description": "Your description here",
+    "license": ["MIT", "BSD-3-Clause", "No license file"],
+    "python_interpreter": ["python3", "python"]
+}
