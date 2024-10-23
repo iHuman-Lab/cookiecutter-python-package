@@ -1,7 +1,6 @@
 import sys
 from contextlib import contextmanager
 
-import feather
 
 
 class SkipWith(Exception):
@@ -55,24 +54,3 @@ class ColorPrint:
         sys.stderr.write('\x1b[1;33m' + message.strip() + '\x1b[0m' + end)
 
 
-def save_to_r_dataset(df, path, save_as_csv=False):
-    """Convert pandas dataframe to r dataframe.
-
-    Parameters
-    ----------
-    df : dataframe
-        Pandas dataframe.
-    path : str
-        Path to save.
-
-    Returns
-    -------
-    None
-        Description of returned object.
-
-    """
-    if save_as_csv:
-        df.to_csv(path, index=False)
-    else:
-        feather.write_dataframe(df, path)
-    return None
